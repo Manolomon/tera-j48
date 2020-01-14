@@ -37,6 +37,7 @@ data.label.unique()
 data = data.loc[data['label'].isin(interest)]
 X = data.text.to_numpy()
 y = data.label.to_numpy(dtype='<U6')
+data
 
 # %%
 documents = []
@@ -118,27 +119,6 @@ print("pctCorrect: " + str(evaluation.percent_correct))
 print("incorrect: " + str(evaluation.incorrect))
 
 # %%
-from weka.core.dataset import Attribute, Instance, Instances
-
-num_att = Attribute.create_numeric("num")
-date_att = Attribute.create_date("dat", "yyyy-MM-dd")
-nom_att = Attribute.create_nominal("nom", ["label1", "label2"])
-
-# create dataset
-dataset = Instances.create_instances("helloworld", [num_att, date_att, nom_att], 0)
-
-# add rows
-values = [3.1415926, date_att.parse_date("2014-04-10"), 1.0]
-inst = Instance.create_instance(values)
-dataset.add_instance(inst)
-
-values = [2.71828, date_att.parse_date("2014-08-09"), Instance.missing_value()]
-inst = Instance.create_instance(values)
-dataset.add_instance(inst)
-
-print(dataset)
-
-# %%
-jvm
+jvm.stop()
 
 # %%
