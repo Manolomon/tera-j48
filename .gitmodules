@@ -1,0 +1,3 @@
+[submodule "tera-promise"]
+	path = tera-promise
+	url = https://github.com/Manolomon/tera-promise
