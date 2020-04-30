@@ -16,10 +16,10 @@
 #hgzdfdfdhjgfdhgf
 
 # %%
-import numpy as np
+import numpy
 import re
 import nltk
-import pandas as pd
+import pandas
 nltk.download('stopwords')
 import pickle
 from nltk.corpus import stopwords
