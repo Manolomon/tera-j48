@@ -78,14 +78,7 @@ le = LabelEncoder()
 le.fit(y)
 y = le.transform(y)
 
-# %%
-jvm.start()
-
-# %%
-from weka.filters import Filter
-dataset = create_instances_from_matrices(X, y, name="Quality Attributes")
-nominal = Filter(classname="weka.filters.unsupervised.attribute.NumericToNominal", options=["-R", "last"])
-nominal.inputformat(dataset)
+# %%jhdjghfjdh
 nominaldata = nominal.filter(dataset)
 nominaldata.class_is_last()
 
@@ -100,8 +93,7 @@ print(cls)
 import weka.plot.graph as graph  # NB: pygraphviz and PIL are required
 graph.plot_dot_graph(cls.graph)
 
-evaluation = Evaluation(nominaldata)                     # initialize with priors
-evaluation.crossvalidate_model(cls, nominaldata, 10, Random(42))  # 10-fold CV
+evaluation = Evaluatiojgdjhfsdminaldata, 10, Random(42))  # 10-fold CV
 print(evaluation.summary())
 print("pctCorrect: " + str(evaluation.percent_correct))
 print("incorrect: " + str(evaluation.incorrect))
