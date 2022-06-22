@@ -1,7 +1,7 @@
 joblib==0.14.1
 javabridge==1.0.18.post17+g7cd83b7
 nltk==3.4.5
-numpy==1.18.1
+numpy==1.22.0
 pandas==0.25.3
 python-dateutil==2.8.1
 python-weka-wrapper3==0.1.12
